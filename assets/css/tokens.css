@@ -1,0 +1,220 @@
+/* ==========================================================================
+   DAD — DCPA Advisers' Directory
+   Design tokens.
+
+   Built and developed by Benedict de Jesus.
+
+   Palette: College of Arts and Letters green with a gold accent, on warm
+   neutrals. To rebrand, change --brand-* and --accent-* only; every surface,
+   border, badge and dark-mode value derives from them.
+   ========================================================================== */
+
+:root {
+  color-scheme: light;
+
+  /* --- brand: CAL green ------------------------------------------------ */
+  --brand-900: #052018;
+  --brand-800: #0a3325;
+  --brand-700: #0d4531;
+  --brand-600: #10593f;
+  --brand-500: #157a56;
+  --brand-400: #2f9c74;
+  --brand-300: #6fbf9c;
+  --brand-200: #c2e3d5;
+  --brand-100: #ecf6f1;
+
+  /* --- accent: academic gold ------------------------------------------- */
+  --accent-700: #7d5a10;
+  --accent-600: #9c7118;
+  --accent-500: #bd8d24;
+  --accent-400: #d9ae51;
+  --accent-200: #f1e2ba;
+  --accent-100: #faf4e5;
+
+  /* --- semantic surfaces ----------------------------------------------- */
+  --bg: #f4f7f4;
+  --bg-tint: radial-gradient(120% 80% at 50% -10%, #f7fbf8 0%, #eff5f1 55%, #ecf2ee 100%);
+  --surface: #ffffff;
+  --surface-2: #f9fbf9;
+  --surface-3: #eef3ef;
+  --surface-inset: #f4f8f5;
+  --overlay: rgba(6, 30, 22, .48);
+
+  --line: #dce7e0;
+  --line-strong: #c5d5cb;
+
+  --text: #12211b;
+  --text-muted: #526158;
+  /* Not lighter than this: --text-faint carries the mobile tab-bar labels and
+     the footer small print, so it must clear 4.5:1 on both --surface and --bg. */
+  --text-faint: #616f67;
+  --text-on-brand: #f2fbf6;
+
+  /* Brand colour when it is used as *text* rather than as a fill. It has to
+     satisfy contrast against light and dark surfaces, which the fill colours
+     cannot — a green dark enough to sit behind white text is unreadable as
+     text on a dark card. */
+  --brand-ink: var(--brand-600);
+  --accent-ink: var(--accent-700);
+
+  /* --- status ---------------------------------------------------------- */
+  --ok-bg: #e4f4ea;      --ok-fg: #1b6b3c;      --ok-line: #b5e0c6;
+  --warn-bg: #fdf2dd;    --warn-fg: #8a5c09;    --warn-line: #f0d9a8;
+  --stop-bg: #fbe9e9;    --stop-fg: #a52a2a;    --stop-line: #ecc9c9;
+  --info-bg: #e7eff9;    --info-fg: #27548c;    --info-line: #c4d6ee;
+
+  /* --- elevation -------------------------------------------------------- */
+  --shadow-1: 0 1px 2px rgba(10, 45, 33, .05), 0 1px 3px rgba(10, 45, 33, .04);
+  --shadow-2: 0 2px 4px rgba(10, 45, 33, .05), 0 8px 20px -6px rgba(10, 45, 33, .13);
+  --shadow-3: 0 4px 10px rgba(10, 45, 33, .07), 0 24px 48px -12px rgba(10, 45, 33, .22);
+  --ring: 0 0 0 3px var(--brand-200);
+
+  /* --- geometry --------------------------------------------------------- */
+  --r-xs: 8px;
+  --r-sm: 12px;
+  --r-md: 16px;
+  --r-lg: 22px;
+  --r-xl: 30px;
+  --r-pill: 999px;
+
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 72px;
+
+  --shell: 1180px;
+  --topbar-h: 60px;
+  --tabbar-h: calc(58px + env(safe-area-inset-bottom, 0px));
+
+  /* --- type -------------------------------------------------------------- */
+  --font-sans: "Manrope", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto,
+               "Helvetica Neue", Arial, sans-serif;
+  --font-display: "Fraunces", ui-serif, Georgia, "Times New Roman", serif;
+  --font-mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+
+  --fs-xs: .75rem;
+  --fs-sm: .8125rem;
+  --fs-base: .9375rem;
+  --fs-md: 1rem;
+  --fs-lg: 1.125rem;
+  --fs-xl: 1.375rem;
+  --fs-2xl: clamp(1.55rem, 1.1rem + 2vw, 2.1rem);
+  --fs-3xl: clamp(2rem, 1.2rem + 3.6vw, 3.1rem);
+
+  /* --- motion ------------------------------------------------------------ */
+  --ease-out: cubic-bezier(.22, 1, .36, 1);
+  --ease-in-out: cubic-bezier(.65, 0, .35, 1);
+  --ease-spring: cubic-bezier(.34, 1.56, .64, 1);
+  --t-fast: 140ms;
+  --t-base: 240ms;
+  --t-slow: 420ms;
+
+  /* --- brand colours of linked services --------------------------------- */
+  --facebook: #1877f2;
+  --linkedin: #0a66c2;
+}
+
+/* --- dark: follows the OS unless the user pinned light ------------------- */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+
+    --brand-200: #1d4a38;
+    --brand-100: #10281f;
+    /* Text-weight brand colours, lightened so they stay legible on dark. */
+    --brand-ink: #6fbf9c;
+    --accent-ink: #e2bd6b;
+    --accent-200: #4a3a17;
+    --accent-100: #2a2110;
+
+    --bg: #0a1310;
+    --bg-tint: radial-gradient(120% 80% at 50% -10%, #132621 0%, #0d1a16 55%, #0a1310 100%);
+    --surface: #121e19;
+    --surface-2: #16251f;
+    --surface-3: #1d3028;
+    --surface-inset: #0f1a15;
+    --overlay: rgba(2, 9, 6, .68);
+
+    --line: #24382e;
+    --line-strong: #35503f;
+
+    --text: #e9f4ee;
+    --text-muted: #a3b8ac;
+    --text-faint: #7b9186;
+    --text-on-brand: #f2fbf6;
+
+    --ok-bg: #10301e;    --ok-fg: #7cd8a0;    --ok-line: #22513a;
+    --warn-bg: #322610;  --warn-fg: #edc172;  --warn-line: #54401c;
+    --stop-bg: #351717;  --stop-fg: #f0a5a5;  --stop-line: #582929;
+    --info-bg: #142238;  --info-fg: #a5c2ec;  --info-line: #2a3d60;
+
+    --shadow-1: 0 1px 2px rgba(0, 0, 0, .5);
+    --shadow-2: 0 2px 6px rgba(0, 0, 0, .45), 0 12px 28px -10px rgba(0, 0, 0, .7);
+    --shadow-3: 0 6px 14px rgba(0, 0, 0, .5), 0 30px 60px -14px rgba(0, 0, 0, .8);
+    --ring: 0 0 0 3px rgba(47, 156, 116, .4);
+
+    --facebook: #4f96ff;
+    --linkedin: #4d9ae0;
+  }
+}
+
+/* --- dark: explicitly pinned by the user --------------------------------- */
+:root[data-theme="dark"] {
+  color-scheme: dark;
+
+  --brand-200: #1d4a38;
+  --brand-100: #10281f;
+  /* Text-weight brand colours, lightened so they stay legible on dark. */
+  --brand-ink: #6fbf9c;
+  --accent-ink: #e2bd6b;
+  --accent-200: #4a3a17;
+  --accent-100: #2a2110;
+
+  --bg: #0a1310;
+  --bg-tint: radial-gradient(120% 80% at 50% -10%, #132621 0%, #0d1a16 55%, #0a1310 100%);
+  --surface: #121e19;
+  --surface-2: #16251f;
+  --surface-3: #1d3028;
+  --surface-inset: #0f1a15;
+  --overlay: rgba(2, 9, 6, .68);
+
+  --line: #24382e;
+  --line-strong: #35503f;
+
+  --text: #e9f4ee;
+  --text-muted: #a3b8ac;
+  --text-faint: #7b9186;
+  --text-on-brand: #f2fbf6;
+
+  --ok-bg: #10301e;    --ok-fg: #7cd8a0;    --ok-line: #22513a;
+  --warn-bg: #322610;  --warn-fg: #edc172;  --warn-line: #54401c;
+  --stop-bg: #351717;  --stop-fg: #f0a5a5;  --stop-line: #582929;
+  --info-bg: #142238;  --info-fg: #a5c2ec;  --info-line: #2a3d60;
+
+  --shadow-1: 0 1px 2px rgba(0, 0, 0, .5);
+  --shadow-2: 0 2px 6px rgba(0, 0, 0, .45), 0 12px 28px -10px rgba(0, 0, 0, .7);
+  --shadow-3: 0 6px 14px rgba(0, 0, 0, .5), 0 30px 60px -14px rgba(0, 0, 0, .8);
+  --ring: 0 0 0 3px rgba(47, 156, 116, .4);
+
+  --facebook: #4f96ff;
+  --linkedin: #4d9ae0;
+}
+
+/* Users who ask for less motion get none of the decorative kind. */
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --t-fast: 1ms;
+    --t-base: 1ms;
+    --t-slow: 1ms;
+  }
+  *, *::before, *::after {
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 1ms !important;
+    scroll-behavior: auto !important;
+  }
+}

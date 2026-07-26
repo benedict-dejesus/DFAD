@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en" data-theme="auto">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>DAD — DCPA Advisers' Directory | BulSU College of Arts and Letters</title>
+<meta name="description" content="Find advisers, consultants, critics and media experts of the Department of Communication and Performing Arts at Bulacan State University — expertise, consultation schedules and availability. Developed by Benedict de Jesus.">
+
+<!-- Authorship -->
+<meta name="author" content="Benedict de Jesus">
+<meta name="creator" content="Benedict de Jesus">
+<meta name="designer" content="Benedict de Jesus">
+<meta name="copyright" content="Benedict de Jesus">
+<link rel="author" href="humans.txt">
+
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#10593f" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0a1310" media="(prefers-color-scheme: dark)">
+
+<meta property="og:title" content="DAD — DCPA Advisers' Directory">
+<meta property="og:description" content="Advisers, consultants, critics and media experts of the Department of Communication and Performing Arts, BulSU College of Arts and Letters. Developed by Benedict de Jesus.">
+<meta property="og:type" content="website">
+<meta property="article:author" content="Benedict de Jesus">
+
+<!-- The SVG monogram stays the tab icon: at 16px an institutional seal is
+     unreadable, while the DCPA seal is used wherever there is room for it. -->
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="assets/img/dcpa-logo.png" type="image/png" sizes="192x192">
+<link rel="apple-touch-icon" href="assets/img/dcpa-logo.png">
+<link rel="manifest" href="manifest.webmanifest">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Manrope:wght@400;500;600;700;800&display=swap">
+
+<link rel="stylesheet" href="assets/css/tokens.css">
+<link rel="stylesheet" href="assets/css/layout.css">
+<link rel="stylesheet" href="assets/css/components.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "DAD — DCPA Advisers' Directory",
+  "description": "Directory of advisers, consultants, critics and media experts of the Department of Communication and Performing Arts, College of Arts and Letters, Bulacan State University.",
+  "author": {
+    "@type": "Person",
+    "name": "Benedict de Jesus",
+    "jobTitle": "Developer and Administrator"
+  },
+  "creator": { "@type": "Person", "name": "Benedict de Jesus" },
+  "publisher": {
+    "@type": "CollegeOrUniversity",
+    "name": "Bulacan State University",
+    "department": {
+      "@type": "Organization",
+      "name": "Department of Communication and Performing Arts, College of Arts and Letters"
+    }
+  }
+}
+</script>
+
+<script>
+  // Applied before first paint so the page never flashes the wrong theme.
+  (function () {
+    try {
+      var saved = localStorage.getItem('dad:theme');
+      if (saved === 'light' || saved === 'dark') {
+        document.documentElement.dataset.theme = saved;
+      }
+    } catch (e) {}
+  })();
+</script>
+</head>
+
+<body>
+<!--
+  DAD — DCPA Advisers' Directory
+  Department of Communication and Performing Arts
+  College of Arts and Letters, Bulacan State University
+
+  Designed, built and maintained by Benedict de Jesus.
+-->
+<a class="skip-link" href="#main">Skip to content</a>
+
+<div class="app-frame">
+
+  <header class="topbar" id="topbar">
+    <div class="topbar__inner">
+      <a class="brand" href="#/" aria-label="DAD — DCPA Advisers' Directory, home">
+        <span class="seals brand__seals">
+          <span class="seal seal--adaptive brand__seal-cal">
+            <img src="assets/img/cal-logo.png" width="192" height="191"
+                 alt="Seal of the College of Arts and Letters, Bulacan State University">
+          </span>
+          <span class="seal seal--adaptive">
+            <img src="assets/img/dcpa-logo.png" width="192" height="192"
+                 alt="Seal of the Department of Communication and Performing Arts">
+          </span>
+        </span>
+        <span class="brand__text">
+          <strong>DAD</strong>
+          <small>DCPA Advisers' Directory</small>
+        </span>
+      </a>
+
+      <nav class="topnav" aria-label="Primary">
+        <a href="#/" data-nav="home">Advisers</a>
+        <a href="#/schedules" data-nav="schedules">Schedules</a>
+        <a href="#/about" data-nav="about">About</a>
+      </nav>
+
+      <div class="topbar__actions">
+        <button class="icon-btn" id="themeToggle" type="button"
+                aria-label="Switch colour theme" title="Switch colour theme">
+          <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"></circle><g class="rays"><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9 7 7M17 17l2.1 2.1M19.1 4.9 17 7M7 17l-2.1 2.1"></path></g></svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5z"></path></svg>
+        </button>
+        <a class="btn btn--primary btn--sm topbar__portal" href="#/portal" data-nav="portal">
+          <svg viewBox="0 0 24 24" aria-hidden="true" class="btn__icon"><path d="M12 3a4 4 0 1 1 0 8 4 4 0 0 1 0-8Z"></path><path d="M4 21a8 8 0 0 1 16 0"></path></svg>
+          Faculty portal
+        </a>
+      </div>
+    </div>
+    <div class="topbar__progress" id="progress" aria-hidden="true"></div>
+  </header>
+
+  <main id="main" class="main" tabindex="-1">
+    <div id="view" class="view"></div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__lockup">
+        <span class="seals">
+          <span class="seal seal--adaptive" style="--seal:44px">
+            <img src="assets/img/cal-logo.png" width="192" height="191" loading="lazy"
+                 alt="Seal of the College of Arts and Letters, Bulacan State University">
+          </span>
+          <span class="seal seal--adaptive" style="--seal:44px">
+            <img src="assets/img/dcpa-logo.png" width="192" height="192" loading="lazy"
+                 alt="Seal of the Department of Communication and Performing Arts">
+          </span>
+        </span>
+        <div>
+          <p class="footer__brand"><strong>DAD</strong> — DCPA Advisers' Directory</p>
+          <p class="footer__meta" id="footerMeta">
+            Department of Communication and Performing Arts · College of Arts and Letters ·
+            Bulacan State University
+          </p>
+        </div>
+      </div>
+
+      <p class="footer__leadership" id="footerLeadership">
+        <span><b data-dean>Dr. Lois Ruth B. Villavicencio</b> — Dean, College of Arts and Letters</span>
+        <span><b data-chair>Mr. Marlon B. Santos</b> — Chairperson, Department of Communication and Performing Arts</span>
+      </p>
+
+      <p class="footer__author">
+        Designed, developed and maintained by
+        <a href="#/about"><strong data-author>Benedict de Jesus</strong></a>
+      </p>
+      <p class="footer__legal">
+        Contact details are published by each faculty member. Please observe the
+        posted consultation hours. Students browse anonymously — nothing about
+        your visit is recorded.
+      </p>
+      <p class="footer__copyright">
+        &copy; <span id="footerYear">2026</span> <span data-author>Benedict de Jesus</span> ·
+        Built for the Department of Communication and Performing Arts, BulSU
+      </p>
+    </div>
+  </footer>
+
+  <nav class="tabbar" aria-label="Primary (mobile)">
+    <a href="#/" data-nav="home">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h10"></path></svg>
+      <span>Advisers</span>
+    </a>
+    <a href="#/schedules" data-nav="schedules">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="3"></rect><path d="M3 10h18M8 3v4M16 3v4"></path></svg>
+      <span>Schedules</span>
+    </a>
+    <a href="#/portal" data-nav="portal">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="3.6"></circle><path d="M5 20a7 7 0 0 1 14 0"></path></svg>
+      <span>Portal</span>
+    </a>
+    <a href="#/about" data-nav="about">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 11v5M12 7.6v.6"></path></svg>
+      <span>About</span>
+    </a>
+  </nav>
+
+</div>
+
+<div id="sheetHost"></div>
+<div id="toastHost" class="toast-host" role="status" aria-live="polite" aria-atomic="false"></div>
+
+<script type="module" src="assets/js/app.js"></script>
+<noscript>
+  <div class="noscript">
+    DAD needs JavaScript to load the advisers' directory. Please enable it, or
+    contact the department office for a printed copy of consultation hours.
+    <p style="margin-top:12px">A project by Benedict de Jesus.</p>
+  </div>
+</noscript>
+</body>
+</html>

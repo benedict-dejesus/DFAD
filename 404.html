@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Redirecting — DAD</title>
+<script>
+  // GitHub Pages serves this file for any unknown path. DAD uses hash routing,
+  // so the only job here is to bounce back to the app root and keep the hash.
+  //
+  // On a project site the app lives at /<repo>/; on a user site or custom
+  // domain it lives at /.
+  (function () {
+    var segments = location.pathname.split('/').filter(Boolean);
+    var isProjectSite = /\.github\.io$/i.test(location.hostname) && segments.length > 0;
+    var base = isProjectSite ? '/' + segments[0] + '/' : '/';
+    location.replace(base + (location.hash || ''));
+  })();
+</script>
+<meta http-equiv="refresh" content="2;url=/">
+</head>
+<body style="font-family:system-ui,sans-serif;padding:2rem;text-align:center">
+  <p>Taking you to the DCPA faculty directory… <a href="/">Continue</a></p>
+</body>
+</html>

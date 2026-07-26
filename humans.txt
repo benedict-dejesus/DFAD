@@ -1,0 +1,28 @@
+/* TEAM */
+
+    Developer, designer and administrator: Benedict de Jesus
+    Site: DAD — DCPA Advisers' Directory
+
+/* SITE */
+
+    Name: DAD — DCPA Advisers' Directory
+    For: Department of Communication and Performing Arts
+         College of Arts and Letters
+         Bulacan State University
+
+    Serves: BA Broadcasting, BA Journalism,
+            Bachelor in Performing Arts
+
+/* TECHNOLOGY */
+
+    Static HTML, CSS and ES modules — no framework, no build step
+    Google Sheets + Apps Script Web App for the database
+    Hosted on GitHub Pages
+
+/* NOTES */
+
+    Students browse anonymously. Nothing about a student visit is
+    recorded anywhere. Faculty members maintain their own profiles,
+    consultation schedules and availability through the faculty portal.
+
+    Built and maintained by Benedict de Jesus.

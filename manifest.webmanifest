@@ -1,0 +1,19 @@
+{
+  "name": "DAD — DCPA Advisers' Directory",
+  "short_name": "DAD",
+  "description": "Advisers, consultation hours and availability for the Department of Communication and Performing Arts, BulSU College of Arts and Letters.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#f4f7f4",
+  "theme_color": "#10593f",
+  "icons": [
+    {
+      "src": "assets/img/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
