@@ -1,5 +1,5 @@
 /**
- * DAD — DCPA Advisers' Directory
+ * DFAD — DCPA Faculty Advisers' Directory
  * Department of Communication and Performing Arts, College of Arts and Letters
  * Bulacan State University
  *
@@ -415,7 +415,7 @@ function findCodeRow_(code) {
 }
 
 function issueCode_(facultyId, role, label, slotNo) {
-  const code = generateCode_(role === 'admin' ? 'DAD' : 'DCPA');
+  const code = generateCode_(role === 'admin' ? 'DFAD' : 'DCPA');
   const salt = Utilities.getUuid();
   insertRow_(SHEETS.CODES, {
     code_hash: hashCode_(code, salt),
@@ -538,7 +538,7 @@ function photoFolder_() {
       // Folder was deleted or moved to trash — fall through and make a new one.
     }
   }
-  const folder = DriveApp.createFolder('DAD — Faculty photos');
+  const folder = DriveApp.createFolder('DFAD — Faculty photos');
   folder.setSharing(DriveApp.Access.ANYONE_WITH_LINK, DriveApp.Permission.VIEW);
   props_().setProperty('PHOTO_FOLDER_ID', folder.getId());
   return folder;

@@ -1,6 +1,6 @@
-# Setting up the DAD backend (Google Sheets + Apps Script)
+# Setting up the DFAD backend (Google Sheets + Apps Script)
 
-**DAD — DCPA Advisers' Directory**
+**DFAD — DCPA Advisers' Directory**
 Built and developed by Benedict de Jesus
 
 This is the complete walkthrough for the database side of DAD. Follow it once
@@ -18,7 +18,7 @@ hold the spreadsheet, the access codes and the faculty photos.
 > and a sheet created under the wrong account cannot simply be moved
 > afterwards without breaking the deployment.
 >
-> If DAD is later handed to the department, transfer the spreadsheet **and**
+> If DFAD is later handed to the department, transfer the spreadsheet **and**
 > recreate the deployment under the department account, then update
 > `BUILT_IN_API_BASE` in `assets/js/config.js`.
 
@@ -131,7 +131,7 @@ This creates the five tabs, the dropdowns, and your coordinator access code.
    - You will see **"Google hasn't verified this app"**. This is expected —
      *you* own this app; it is unverified simply because it was never submitted
      to Google for review.
-   - Click **Advanced** ▸ **Go to DAD API (unsafe)** ▸ **Allow**.
+   - Click **Advanced** ▸ **Go to DFAD API (unsafe)** ▸ **Allow**.
    - It asks to see and edit your spreadsheets **and your Drive files**. The
      Drive permission is what lets faculty upload profile photos — DAD puts
      them in one folder it creates, called *DAD — Faculty photos*.
@@ -142,11 +142,11 @@ You will see something like:
 ```
 DAD — DCPA Advisers' Directory: setup complete.
 
-Spreadsheet: DAD — DCPA Advisers' Database
+Spreadsheet: DFAD — DCPA Faculty Advisers' Database
 Tabs ready: Faculty, Consultations, Codes, Sessions, Settings
 
 =====================================================
-  COORDINATOR ACCESS CODE:  DAD-7FHK-92QX
+  COORDINATOR ACCESS CODE:  DFAD-4NMV-GFKA
   Copy it now — it is hashed and cannot be shown again.
 =====================================================
 ```
@@ -171,7 +171,7 @@ at a time, you create the whole roster now and hand out codes as you meet
 people.
 
 1. In the script editor, choose **`prepareRoster50`** ▸ **▶ Run**.
-   (Or, from the spreadsheet: **DAD ▸ Prepare 50 adviser slots + codes**.)
+   (Or, from the spreadsheet: **DFAD ▸ Prepare 50 adviser slots + codes**.)
 2. It creates 50 blank rows on the **Faculty** tab with status `Pending`, and
    issues one access code for each.
 3. A new tab appears: **Codes to hand out**.
