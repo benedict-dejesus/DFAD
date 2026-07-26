@@ -228,9 +228,6 @@ function unconfiguredBanner() {
           <li>Copy the deployment URL — it ends in <code>/exec</code>.</li>
           <li>Paste it into <code>BUILT_IN_API_BASE</code> in <code>assets/js/config.js</code> and commit.</li>
         </ol>
-        <a class="btn btn--primary" href="#/about">
-          ${icon('arrow', 'btn__icon')} Or paste it here to test first
-        </a>
         <p style="margin-top:18px">
           <span class="credit">${icon('star')} DFAD by <b>Benedict de Jesus</b></span>
         </p>
@@ -253,7 +250,8 @@ async function boot() {
 
   if (!CONFIG.isConfigured) {
     render(viewHost, unconfiguredBanner());
-    // The about view carries the connection panel, so routing still works.
+    // About is static, so it still reads fine with no backend. Everything
+    // else needs data and would only show an error, so it stays on the banner.
     startRouter(async (next) => {
       if (next.name === 'about') {
         await mountView('about');

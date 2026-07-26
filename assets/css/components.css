@@ -1478,14 +1478,6 @@ details > summary::marker { content: ""; }
 .faq[open] { border-color: var(--brand-200); }
 .faq > p { animation: rise var(--t-base) var(--ease-out); }
 
-#connPanel > summary {
-  display: flex;
-  align-items: center;
-  gap: var(--space-2);
-  color: var(--text-muted);
-}
-#connPanel > summary svg { width: 17px; height: 17px; }
-
 .kbd {
   font-family: var(--font-mono);
   font-size: var(--fs-xs);

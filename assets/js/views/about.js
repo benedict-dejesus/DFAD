@@ -1,14 +1,16 @@
 /**
- * DFAD — DCPA Advisers' Directory
- * About page, credits, and the connection settings panel used during setup.
+ * DFAD — DCPA Faculty Advisers' Directory
+ * About page: what DFAD is, who it is for, and who made it.
  * Built and developed by Benedict de Jesus.
+ *
+ * Purely informational — nothing here changes any setting. The Apps Script URL
+ * lives in `assets/js/config.js`; there is deliberately no way to repoint the
+ * site from the interface.
  */
 
-import { html, render, $, delegate } from '../util.js';
-import { icon, toast } from '../ui.js';
-import { CONFIG } from '../config.js';
-import { state, loadDirectory } from '../store.js';
-import { api } from '../api.js';
+import { html, render } from '../util.js';
+import { icon } from '../ui.js';
+import { state } from '../store.js';
 
 const FAQ = [
   [
@@ -247,73 +249,9 @@ export function mount(container) {
         </p>
       </section>
 
-      <details class="panel" style="margin-top:16px" id="connPanel">
-        <summary style="cursor:pointer;font-weight:700">
-          ${icon('link')} Connection settings
-        </summary>
-        <div class="stack" style="margin-top:16px">
-          <p class="section__sub" style="margin:0">
-            Where this site reads its data from. You only need this when setting
-            the site up or moving it to a new spreadsheet.
-          </p>
-          <div class="field">
-            <label for="apiBase">Apps Script Web App URL</label>
-            <input class="input" id="apiBase" type="url" spellcheck="false"
-                   placeholder="https://script.google.com/macros/s/…/exec"
-                   value="${CONFIG.apiBase}">
-            <p class="field__hint">
-              Saved in this browser only. For a permanent setting, paste it into
-              <code>assets/js/config.js</code> and commit.
-            </p>
-          </div>
-          <div class="row">
-            <button class="btn btn--primary btn--sm" type="button" data-act="save-api">
-              ${icon('check', 'btn__icon')} Save &amp; test
-            </button>
-            <button class="btn btn--ghost btn--sm" type="button" data-act="clear-api">Clear override</button>
-          </div>
-          <div id="connResult"></div>
-        </div>
-      </details>
-
       <p style="text-align:center;margin-top:24px">
         <span class="credit">${icon('star')} DFAD — designed and developed by <b>${author}</b></span>
       </p>
     </div>
   `);
-
-  const offs = [];
-
-  offs.push(delegate(container, 'click', '[data-act="save-api"]', async (event, button) => {
-    const url = $('#apiBase', container).value.trim();
-    CONFIG.setApiBase(url);
-    button.classList.add('is-busy');
-    const result = $('#connResult', container);
-    try {
-      const pong = await api.meta();
-      render(result, html`
-        <div class="notice notice--ok">${icon('check')}<div>
-          Connected. Reading “${pong.site?.title || 'directory'}”.
-        </div></div>`);
-      loadDirectory({ force: true });
-      toast('Connected to the directory service', 'ok');
-    } catch (error) {
-      render(result, html`
-        <div class="notice notice--stop">${icon('alert')}<div>${error.message}</div></div>`);
-    } finally {
-      button.classList.remove('is-busy');
-    }
-  }));
-
-  offs.push(delegate(container, 'click', '[data-act="clear-api"]', () => {
-    CONFIG.setApiBase('');
-    $('#apiBase', container).value = CONFIG.apiBase;
-    render($('#connResult', container), '');
-    toast('Override cleared', 'info');
-  }));
-
-  // Open the connection panel automatically when nothing is configured yet.
-  if (!CONFIG.isConfigured) $('#connPanel', container).open = true;
-
-  return () => offs.forEach((off) => off());
 }

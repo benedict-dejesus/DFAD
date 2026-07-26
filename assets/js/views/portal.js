@@ -31,7 +31,8 @@ const MODES = ['Face-to-face', 'Online', 'Hybrid'];
  */
 const TASKS = [
   ['adviser', 'Thesis Adviser', 'users', 'Supervising a thesis from proposal to defence.'],
-  ['critic', 'Critic', 'clipboard', 'Sitting on a panel as critic or reactor.'],
+  ['critic', 'Critic', 'clipboard',
+    'Checking the alignment and correctness of the research questions, methodology, data, results and end product.'],
   ['consultant', 'Thesis Consultant', 'spark', 'Advising on method, production or craft — without being the adviser.'],
   ['media', 'Media Expert', 'video', 'Interviews, expert commentary and media requests.']
 ];

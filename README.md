@@ -207,9 +207,15 @@ const BUILT_IN_API_BASE = 'https://script.google.com/macros/s/AKfycb…/exec';
 
 Commit and push.
 
-To test before committing, open the live site ▸ **About ▸ Connection
-settings**, paste the URL and press **Save & test**. That stores it in your
-browser only — every other visitor still needs the value committed here.
+To test before committing, serve the folder locally and set the override in the
+browser console:
+
+```js
+localStorage.setItem('dad:apiBase', 'https://script.google.com/macros/s/…/exec')
+```
+
+That applies to your browser only. The site deliberately exposes no interface
+for changing where it reads its data from.
 
 ### Step 9 — Publish the site
 

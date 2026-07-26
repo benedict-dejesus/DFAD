@@ -271,10 +271,16 @@ const BUILT_IN_API_BASE = 'https://script.google.com/macros/s/AKfycb....../exec'
 
 Commit and push. GitHub Pages redeploys in a minute or two.
 
-**Want to test before committing?** Open the live site, go to **About ▸
-Connection settings**, paste the URL there and hit **Save & test**. That stores
-it in your browser only — good for checking, but every other visitor still
-needs the value committed into `config.js`.
+**Want to test before committing?** Serve the folder locally
+(`npx serve -l 4321 .`) and run this once in the browser console:
+
+```js
+localStorage.setItem('dad:apiBase', 'https://script.google.com/macros/s/…/exec')
+```
+
+That stores the URL in your browser only. The site deliberately offers no
+interface for repointing itself — a public directory that any visitor could
+aim at a different spreadsheet would be a liability, not a feature.
 
 ---
 
