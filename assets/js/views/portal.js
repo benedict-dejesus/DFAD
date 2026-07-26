@@ -1,5 +1,5 @@
 /**
- * DFAD — DCPA Faculty Advisers' Directory
+ * DFAD — DCPA Faculty Advisers Directory
  * Faculty dashboard — the only part of DFAD that can change the database.
  * Built and developed by Benedict de Jesus.
  *

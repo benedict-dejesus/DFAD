@@ -1,5 +1,5 @@
 /**
- * DFAD — DCPA Faculty Advisers' Directory
+ * DFAD — DCPA Faculty Advisers Directory
  * Tests for the Apps Script validation layer.
  * Built and developed by Benedict de Jesus.
  *

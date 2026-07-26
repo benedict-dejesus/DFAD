@@ -1,5 +1,5 @@
 /**
- * DFAD — DCPA Faculty Advisers' Directory
+ * DFAD — DCPA Faculty Advisers Directory
  * Coordinator dashboard.
  * Built and developed by Benedict de Jesus.
  *

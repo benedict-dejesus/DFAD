@@ -1,5 +1,5 @@
 /**
- * DFAD — DCPA Faculty Advisers' Directory
+ * DFAD — DCPA Faculty Advisers Directory
  * About page: what DFAD is, who it is for, and who made it.
  * Built and developed by Benedict de Jesus.
  *
@@ -83,7 +83,7 @@ export function mount(container) {
         </div>
 
         <h1 class="panel__title" style="font-size:var(--fs-2xl)">About DFAD</h1>
-        <p class="panel__sub">DCPA Advisers' Directory</p>
+        <p class="panel__sub">DCPA Advisers Directory</p>
         <p>
           DFAD is the advisers' directory of the <b>Department of Communication and
           Performing Arts</b> — ${site.college || 'College of Arts and Letters'},

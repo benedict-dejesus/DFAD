@@ -1,5 +1,5 @@
 /**
- * DFAD — DCPA Faculty Advisers' Directory
+ * DFAD — DCPA Faculty Advisers Directory
  * In-browser mock of the Apps Script API.
  * Built and developed by Benedict de Jesus.
  *
@@ -34,7 +34,7 @@ const blankRoles = () => ({ adviser: 'Closed', consultant: 'Closed', critic: 'Cl
 
 const db = {
   settings: {
-    site_title: "DFAD — DCPA Faculty Advisers' Directory",
+    site_title: "DFAD — DCPA Faculty Advisers Directory",
     site_tagline: 'Advisers, consultants, critics and media experts',
     department: 'Department of Communication and Performing Arts',
     college: 'College of Arts and Letters',

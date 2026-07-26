@@ -1,6 +1,6 @@
 # Setting up the DFAD backend (Google Sheets + Apps Script)
 
-**DFAD — DCPA Faculty Advisers' Directory**
+**DFAD — DCPA Faculty Advisers Directory**
 Built and developed by Benedict de Jesus
 
 This is the complete walkthrough for the database side of DFAD. Follow it once
@@ -63,7 +63,7 @@ anywhere. The database holds exactly three things:
 
 1. Signed in as `benedictdejesuslpt@gmail.com`, go to <https://sheets.new>
    (this creates a new blank spreadsheet in that Drive).
-2. Rename it something obvious: **`DFAD — DCPA Faculty Advisers' Database`**.
+2. Rename it something obvious: **`DFAD — DCPA Faculty Advisers Database`**.
    Click the title at the top-left to rename.
 3. Leave the default `Sheet1` tab alone — the installer replaces it in step 4.
 
@@ -140,9 +140,9 @@ This creates the five tabs, the dropdowns, and your coordinator access code.
 You will see something like:
 
 ```
-DFAD — DCPA Faculty Advisers' Directory: setup complete.
+DFAD — DCPA Faculty Advisers Directory: setup complete.
 
-Spreadsheet: DFAD — DCPA Faculty Advisers' Database
+Spreadsheet: DFAD — DCPA Faculty Advisers Database
 Tabs ready: Faculty, Consultations, Codes, Sessions, Settings
 
 =====================================================
@@ -289,14 +289,14 @@ aim at a different spreadsheet would be a liability, not a feature.
 In the script editor, run **`selfTest`**:
 
 ```
-PASS  spreadsheet reachable  → DFAD — DCPA Faculty Advisers' Database
+PASS  spreadsheet reachable  → DFAD — DCPA Faculty Advisers Database
 PASS  tab "Faculty"  → 30 columns
 PASS  tab "Consultations"  → 11 columns
 PASS  tab "Codes"  → 9 columns
 PASS  tab "Sessions"  → 6 columns
 PASS  tab "Settings"  → 3 columns
 PASS  script pepper set  → yes
-PASS  meta endpoint  → DFAD — DCPA Faculty Advisers' Directory
+PASS  meta endpoint  → DFAD — DCPA Faculty Advisers Directory
 PASS  directory endpoint  → 3 listed adviser(s)
 PASS  roster prepared  → 50 unclaimed slot(s) waiting
 PASS  coordinator code exists  → 1 active
@@ -528,6 +528,6 @@ hand-out sheet once distribution is done, and keep the spreadsheet private.
 
 ---
 
-*DFAD — DCPA Faculty Advisers' Directory. Proposed by Mr. Joshua Nicdao.
+*DFAD — DCPA Faculty Advisers Directory. Proposed by Mr. Joshua Nicdao.
 Designed, developed and documented by Benedict de Jesus for the Department of Communication and Performing Arts,
 College of Arts and Letters, Bulacan State University.*

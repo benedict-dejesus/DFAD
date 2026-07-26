@@ -102,7 +102,7 @@ export async function loadMeta() {
     // The site still works without the settings tab; fall back to defaults.
     state.meta = {
       site: {
-        title: "DFAD — DCPA Faculty Advisers' Directory",
+        title: "DFAD — DCPA Faculty Advisers Directory",
         tagline: 'Department of Communication and Performing Arts',
         college: 'College of Arts and Letters',
         university: 'Bulacan State University'

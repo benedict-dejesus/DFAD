@@ -1,4 +1,4 @@
-# DFAD — DCPA Faculty Advisers' Directory
+# DFAD — DCPA Faculty Advisers Directory
 
 A mobile-first, interactive directory of advisers for the **Department of
 Communication and Performing Arts (DCPA)**, College of Arts and Letters,
@@ -86,7 +86,7 @@ account cannot simply be moved later without breaking the deployment.
 
 1. Go to <https://sheets.new>. A blank spreadsheet opens in your Drive.
 2. Click the title at the top-left and rename it
-   **`DFAD — DCPA Faculty Advisers' Database`**.
+   **`DFAD — DCPA Faculty Advisers Database`**.
 3. Leave `Sheet1` alone — the installer replaces it in step 5.
 
 Keep this spreadsheet **private**. Do not share it with "Anyone with the link".
@@ -230,7 +230,7 @@ or two.
 In the script editor, run **`selfTest`**. Every line should read `PASS`:
 
 ```
-PASS  spreadsheet reachable  → DFAD — DCPA Faculty Advisers' Database
+PASS  spreadsheet reachable  → DFAD — DCPA Faculty Advisers Database
 PASS  tab "Faculty"  → 30 columns
 PASS  directory endpoint  → 3 listed adviser(s)
 PASS  roster prepared  → 50 unclaimed slot(s) waiting
@@ -441,7 +441,7 @@ touch targets meet minimum sizing on coarse pointers. Respects
 
 ## Credits
 
-**DFAD — DCPA Faculty Advisers' Directory** was designed, built, documented and is
+**DFAD — DCPA Faculty Advisers Directory** was designed, built, documented and is
 maintained solely by **Benedict de Jesus** — architecture, interface, database
 design and this documentation, from an idea proposed by **Mr. Joshua Nicdao**.
 

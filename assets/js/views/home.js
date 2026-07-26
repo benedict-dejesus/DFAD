@@ -1,5 +1,5 @@
 /**
- * DFAD — DCPA Faculty Advisers' Directory
+ * DFAD — DCPA Faculty Advisers Directory
  * Student dashboard: the read-only directory of advisers.
  * Built and developed by Benedict de Jesus.
  *

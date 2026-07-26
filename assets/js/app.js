@@ -1,5 +1,5 @@
 /**
- * DFAD — DCPA Faculty Advisers' Directory
+ * DFAD — DCPA Faculty Advisers Directory
  * Application bootstrap.
  * Built and developed by Benedict de Jesus.
  *
@@ -127,7 +127,7 @@ function syncNav(name) {
   });
 
   const site = state.meta?.site;
-  const base = site?.title || "DFAD — DCPA Faculty Advisers' Directory";
+  const base = site?.title || "DFAD — DCPA Faculty Advisers Directory";
   document.title = TITLES[key] ? `${TITLES[key]} · ${base}` : base;
 }
 

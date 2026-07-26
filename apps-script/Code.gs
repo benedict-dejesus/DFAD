@@ -1,5 +1,5 @@
 /**
- * DFAD — DCPA Faculty Advisers' Directory
+ * DFAD — DCPA Faculty Advisers Directory
  * Built and developed by Benedict de Jesus.
  *
  * Code.gs — HTTP entry points and the API surface.
@@ -115,7 +115,7 @@ function apiMeta_() {
   const s = settings_();
   return {
     site: {
-      title: s.site_title || "DFAD — DCPA Faculty Advisers' Directory",
+      title: s.site_title || "DFAD — DCPA Faculty Advisers Directory",
       tagline: s.site_tagline || 'Advisers, consultants, critics and media experts',
       department: s.department || 'Department of Communication and Performing Arts',
       college: s.college || 'College of Arts and Letters',

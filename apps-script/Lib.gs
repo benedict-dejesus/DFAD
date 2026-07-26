@@ -1,5 +1,5 @@
 /**
- * DFAD — DCPA Faculty Advisers' Directory
+ * DFAD — DCPA Faculty Advisers Directory
  * Department of Communication and Performing Arts, College of Arts and Letters
  * Bulacan State University
  *

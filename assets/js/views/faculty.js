@@ -1,5 +1,5 @@
 /**
- * DFAD — DCPA Faculty Advisers' Directory
+ * DFAD — DCPA Faculty Advisers Directory
  * Adviser detail sheet — the student's read-only view of one faculty member.
  * Built and developed by Benedict de Jesus.
  *

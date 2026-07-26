@@ -1,5 +1,5 @@
 /**
- * DFAD — DCPA Faculty Advisers' Directory
+ * DFAD — DCPA Faculty Advisers Directory
  * Built and developed by Benedict de Jesus.
  *
  * Setup.gs — one-time installer, roster preparation, and the spreadsheet menu.
@@ -34,7 +34,7 @@ function setup() {
   }
 
   const lines = [
-    "DFAD — DCPA Faculty Advisers' Directory: setup complete.",
+    "DFAD — DCPA Faculty Advisers Directory: setup complete.",
     '',
     'Spreadsheet: ' + ss.getName(),
     'Tabs ready: ' + Object.keys(HEADERS).join(', ')
@@ -94,7 +94,7 @@ function ensureSheet_(ss, name, headers) {
 function seedSettings_() {
   const current = settings_();
   const defaults = {
-    site_title: "DFAD — DCPA Faculty Advisers' Directory",
+    site_title: "DFAD — DCPA Faculty Advisers Directory",
     site_tagline: 'Advisers, consultants, critics and media experts',
     department: 'Department of Communication and Performing Arts',
     college: 'College of Arts and Letters',
@@ -509,6 +509,6 @@ function selfTest() {
 
   const out = results.join('\n');
   console.log(out);
-  alert_("DFAD — DCPA Faculty Advisers' Directory self-test\n\n" + out);
+  alert_("DFAD — DCPA Faculty Advisers Directory self-test\n\n" + out);
   return out;
 }

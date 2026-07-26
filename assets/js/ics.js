@@ -1,5 +1,5 @@
 /**
- * DFAD — DCPA Faculty Advisers' Directory
+ * DFAD — DCPA Faculty Advisers Directory
  * Calendar export.
  * Built and developed by Benedict de Jesus.
  *
@@ -108,7 +108,7 @@ export function buildIcs(person, slots = person.slots || []) {
       `${slot.day}, ${fmtRange(slot.start, slot.end)} (${slot.mode})`,
       slot.note,
       person.email ? `Email: ${person.email}` : '',
-      "Published through DFAD, the DCPA Faculty Advisers' Directory."
+      "Published through DFAD, the DCPA Faculty Advisers Directory."
     ].filter(Boolean).join('\n');
 
     lines.push(
