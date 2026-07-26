@@ -1,5 +1,5 @@
 /**
- * DAD — shared interface pieces: toasts, bottom-sheet dialogs, confirmations,
+ * DFAD — shared interface pieces: toasts, bottom-sheet dialogs, confirmations,
  * the top progress bar, and the small icon set used across views.
  */
 

@@ -1,5 +1,5 @@
 /**
- * DAD — department-wide consultation schedule, grouped by weekday.
+ * DFAD — department-wide consultation schedule, grouped by weekday.
  */
 
 import {
@@ -80,7 +80,7 @@ export function mount(container) {
 
       <p style="text-align:center;margin-top:32px">
         <span class="credit">
-          ${icon('star')} DAD is designed and developed by <b>Benedict de Jesus</b>
+          ${icon('star')} DFAD is designed and developed by <b>Benedict de Jesus</b>
         </span>
       </p>
     </div>

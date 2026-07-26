@@ -1,5 +1,5 @@
 /**
- * DAD — DCPA Advisers' Directory
+ * DFAD — DCPA Faculty Advisers' Directory
  * Calendar export.
  * Built and developed by Benedict de Jesus.
  *
@@ -84,7 +84,7 @@ export function buildIcs(person, slots = person.slots || []) {
   const lines = [
     'BEGIN:VCALENDAR',
     'VERSION:2.0',
-    'PRODID:-//BulSU CAL//DAD DCPA Advisers Directory//EN',
+    'PRODID:-//BulSU CAL//DFAD DCPA Faculty Advisers Directory//EN',
     'CALSCALE:GREGORIAN',
     'METHOD:PUBLISH',
     `X-WR-CALNAME:${escapeText(name + ' — consultation hours')}`
@@ -108,7 +108,7 @@ export function buildIcs(person, slots = person.slots || []) {
       `${slot.day}, ${fmtRange(slot.start, slot.end)} (${slot.mode})`,
       slot.note,
       person.email ? `Email: ${person.email}` : '',
-      "Published through DAD, the DCPA Advisers' Directory."
+      "Published through DFAD, the DCPA Faculty Advisers' Directory."
     ].filter(Boolean).join('\n');
 
     lines.push(

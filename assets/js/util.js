@@ -1,5 +1,5 @@
 /**
- * DAD — DOM helpers, safe templating and formatting.
+ * DFAD — DOM helpers, safe templating and formatting.
  *
  * Everything a faculty member types ends up in a spreadsheet cell and then on
  * this page, so `html` escapes every interpolation by default. Use `raw()`

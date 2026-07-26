@@ -1,5 +1,5 @@
 /**
- * DAD — DCPA Advisers' Directory
+ * DFAD — DCPA Faculty Advisers' Directory
  * Adviser detail sheet — the student's read-only view of one faculty member.
  * Built and developed by Benedict de Jesus.
  *
@@ -323,7 +323,7 @@ function detailBody(person) {
       <div id="panelHost">${profilePanel(person)}</div>
 
       <p style="text-align:center;margin-top:24px">
-        <span class="credit">${icon('star')} DAD by <b>Benedict de Jesus</b></span>
+        <span class="credit">${icon('star')} DFAD by <b>Benedict de Jesus</b></span>
       </p>
     </div>
   `;

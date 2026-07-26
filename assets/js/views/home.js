@@ -1,5 +1,5 @@
 /**
- * DAD — DCPA Advisers' Directory
+ * DFAD — DCPA Faculty Advisers' Directory
  * Student dashboard: the read-only directory of advisers.
  * Built and developed by Benedict de Jesus.
  *
@@ -236,7 +236,7 @@ export function mount(container) {
 
       <p style="text-align:center;margin-top:32px">
         <span class="credit">
-          ${icon('star')} DAD is designed and developed by <b>Benedict de Jesus</b>
+          ${icon('star')} DFAD is designed and developed by <b>Benedict de Jesus</b>
         </span>
       </p>
     </div>

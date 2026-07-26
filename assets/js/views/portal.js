@@ -1,6 +1,6 @@
 /**
- * DAD — DCPA Advisers' Directory
- * Faculty dashboard — the only part of DAD that can change the database.
+ * DFAD — DCPA Faculty Advisers' Directory
+ * Faculty dashboard — the only part of DFAD that can change the database.
  * Built and developed by Benedict de Jesus.
  *
  * Faculty and guest faculty sign in with an access code and maintain their own
@@ -114,7 +114,7 @@ function loginCard() {
       </div>
 
       <p style="text-align:center;margin-top:20px">
-        <span class="credit">${icon('star')} DAD by <b>Benedict de Jesus</b></span>
+        <span class="credit">${icon('star')} DFAD by <b>Benedict de Jesus</b></span>
       </p>
     </div>
   `;
@@ -127,7 +127,7 @@ function wireLogin(container) {
   const button = $('#loginBtn', container);
 
   // Tidy the code as it is typed without re-grouping it: prefixes vary in
-  // length (DCPA-… for faculty, DAD-… for coordinators), so imposing a fixed
+  // length (DCPA-… for faculty, DFAD-… for coordinators), so imposing a fixed
   // 4-4-4 shape would visibly mangle what the user pasted.
   on(input, 'input', () => {
     const caretAtEnd = input.selectionStart === input.value.length;
@@ -332,7 +332,7 @@ function profileForm(p) {
 
       <h3 class="panel__title" style="font-size:var(--fs-md)">Where students can reach you</h3>
       <p class="section__sub">
-        Paste a link or just type your username — DAD works out the rest.
+        Paste a link or just type your username — DFAD works out the rest.
         Leave a field blank to hide that button from your profile.
       </p>
 
@@ -786,7 +786,7 @@ function accountPanel(p) {
       </button>
 
       <p style="text-align:center;margin-top:8px">
-        <span class="credit">${icon('star')} DAD by <b>Benedict de Jesus</b></span>
+        <span class="credit">${icon('star')} DFAD by <b>Benedict de Jesus</b></span>
       </p>
     </div>
   `;
@@ -830,7 +830,7 @@ function dashboard(p) {
         <div class="notice notice--warn" style="margin-top:16px">
           ${icon('star')}
           <div>
-            <b>Welcome to DAD.</b> Your profile is not listed yet — fill in your
+            <b>Welcome to DFAD.</b> Your profile is not listed yet — fill in your
             name below and press <b>Save profile</b>, and you will appear in the
             directory straight away.
           </div>

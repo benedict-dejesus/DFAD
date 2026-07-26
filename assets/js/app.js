@@ -1,5 +1,5 @@
 /**
- * DAD — DCPA Advisers' Directory
+ * DFAD — DCPA Faculty Advisers' Directory
  * Application bootstrap.
  * Built and developed by Benedict de Jesus.
  *
@@ -77,7 +77,7 @@ function notFound() {
       <div class="empty" style="margin-top:32px">
         ${icon('empty')}
         <h3>Page not found</h3>
-        <p>That link does not lead anywhere in DAD.</p>
+        <p>That link does not lead anywhere in DFAD.</p>
         <a class="btn btn--primary" href="#/">${icon('back', 'btn__icon')} Back to the directory</a>
       </div>
     </div>`;
@@ -127,7 +127,7 @@ function syncNav(name) {
   });
 
   const site = state.meta?.site;
-  const base = site?.title || "DAD — DCPA Advisers' Directory";
+  const base = site?.title || "DFAD — DCPA Faculty Advisers' Directory";
   document.title = TITLES[key] ? `${TITLES[key]} · ${base}` : base;
 }
 
@@ -220,7 +220,7 @@ function unconfiguredBanner() {
           <h1 class="panel__title" style="font-size:var(--fs-xl)">Almost there</h1>
         </div>
         <p class="panel__sub">
-          DAD is built and deployed, but it does not know where its data lives yet.
+          DFAD is built and deployed, but it does not know where its data lives yet.
         </p>
         <ol class="stack stack--tight" style="list-style:decimal;padding-left:20px;margin-bottom:16px">
           <li>Follow <code>apps-script/GUIDE.md</code> to create the spreadsheet and deploy the Web App.</li>
@@ -231,7 +231,7 @@ function unconfiguredBanner() {
           ${icon('arrow', 'btn__icon')} Or paste it here to test first
         </a>
         <p style="margin-top:18px">
-          <span class="credit">${icon('star')} DAD by <b>Benedict de Jesus</b></span>
+          <span class="credit">${icon('star')} DFAD by <b>Benedict de Jesus</b></span>
         </p>
       </div>
     </div>`;
@@ -291,7 +291,7 @@ async function boot() {
   });
 
   // Handy while marking papers at 1am, and harmless in production.
-  window.__DAD__ = { state, navigate, loadDirectory, CONFIG };
+  window.__DFAD__ = { state, navigate, loadDirectory, CONFIG };
 }
 
 boot().catch((error) => {
@@ -300,7 +300,7 @@ boot().catch((error) => {
     <div class="shell">
       <div class="empty" style="margin-top:32px">
         ${icon('alert')}
-        <h3>DAD failed to start</h3>
+        <h3>DFAD failed to start</h3>
         <p>${error?.message || 'An unexpected error occurred.'}</p>
         <button class="btn btn--primary" type="button" onclick="location.reload()">Reload</button>
       </div>

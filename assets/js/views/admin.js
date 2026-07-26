@@ -1,5 +1,5 @@
 /**
- * DAD — DCPA Advisers' Directory
+ * DFAD — DCPA Faculty Advisers' Directory
  * Coordinator dashboard.
  * Built and developed by Benedict de Jesus.
  *
@@ -152,7 +152,7 @@ function shell() {
 
       <p style="text-align:center;margin-top:20px">
         <span class="credit">
-          ${icon('star')} DAD is designed and developed by <b>Benedict de Jesus</b>
+          ${icon('star')} DFAD is designed and developed by <b>Benedict de Jesus</b>
         </span>
       </p>
     </div>
