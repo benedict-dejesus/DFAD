@@ -11,7 +11,7 @@
  *     localStorage.setItem('dad:apiBase', 'https://script.google.com/.../exec')
  */
 
-const BUILT_IN_API_BASE = '';
+const BUILT_IN_API_BASE = 'https://script.google.com/macros/s/AKfycbwgvOYTAeQsFH5EiA4LODyCHat7IA2GYpdroDiaRWzPPjl8JWboJZjBuRbJ6rgTc_fy/exec';
 
 function storedApiBase() {
   try {
