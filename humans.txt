@@ -1,11 +1,12 @@
 /* TEAM */
 
+    Proponent (originated the idea):       Mr. Joshua Nicdao
     Developer, designer and administrator: Benedict de Jesus
-    Site: DAD — DCPA Advisers' Directory
+    Site: DFAD — DCPA Faculty Advisers' Directory
 
 /* SITE */
 
-    Name: DAD — DCPA Advisers' Directory
+    Name: DFAD — DCPA Faculty Advisers' Directory
     For: Department of Communication and Performing Arts
          College of Arts and Letters
          Bulacan State University

@@ -54,6 +54,8 @@ const FAQ = [
 export function mount(container) {
   const site = state.meta?.site || {};
   const author = site.author || 'Benedict de Jesus';
+  const proponent = site.proponent || 'Mr. Joshua Nicdao';
+  const proponentTitle = site.proponentTitle || 'Proponent — originated the idea for DFAD';
 
   render(container, html`
     <div class="shell">
@@ -198,6 +200,27 @@ export function mount(container) {
       </section>
 
       <section class="panel" style="margin-top:16px">
+        <h2 class="panel__title" style="font-size:var(--fs-lg)">Where the idea came from</h2>
+        <div class="author-card author-card--proponent" style="margin-top:12px">
+          <span class="author-card__mark" aria-hidden="true">JN</span>
+          <div>
+            <h3 data-proponent>${proponent}</h3>
+            <p class="author-card__role">${proponentTitle}</p>
+            <p>
+              DFAD exists because ${proponent} proposed it. The idea of a single
+              place where students could find the right resource persons for
+              their thesis — and where faculty could keep their own details
+              current — was his.
+            </p>
+            <p style="margin-top:10px">
+              Every student who finds an adviser through this directory is
+              benefiting from that idea.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel" style="margin-top:16px">
         <h2 class="panel__title" style="font-size:var(--fs-lg)">Developer</h2>
         <div class="author-card" style="margin-top:12px">
           <span class="author-card__mark" aria-hidden="true">BdJ</span>
@@ -211,10 +234,10 @@ export function mount(container) {
             </p>
             <p style="margin-top:10px">
               DFAD is a personal gift to the Department of Communication and
-              Performing Arts: built so that resource persons for thesis work —
-              advisers, consultants, critics and media experts — are findable by
-              the students who need them, and so that keeping the directory
-              accurate never becomes anyone's second job.
+              Performing Arts, built on ${proponent}'s idea: so that resource
+              persons for thesis work — advisers, consultants, critics and media
+              experts — are findable by the students who need them, and so that
+              keeping the directory accurate never becomes anyone's second job.
             </p>
           </div>
         </div>

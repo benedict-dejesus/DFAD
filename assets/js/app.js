@@ -150,6 +150,7 @@ function syncSiteChrome() {
     $$(`[${attr}]`).forEach((node) => { node.textContent = value; });
   };
   bind('data-author', site.author || 'Benedict de Jesus');
+  bind('data-proponent', site.proponent);
   bind('data-dean', site.dean);
   bind('data-chair', site.chair);
 }

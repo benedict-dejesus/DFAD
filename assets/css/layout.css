@@ -311,6 +311,8 @@ button { cursor: pointer; }
   color: var(--text-muted);
   padding-block-start: var(--space-2);
 }
+/* Two credit lines sit together — only the first needs the gap above. */
+.footer__author + .footer__author { padding-block-start: 2px; }
 .footer__author strong { color: var(--brand-ink); }
 .footer__author a { text-decoration: none; }
 .footer__author a:hover strong { text-decoration: underline; text-underline-offset: 3px; }

@@ -1,10 +1,11 @@
-# DAD — DCPA Advisers' Directory
+# DFAD — DCPA Faculty Advisers' Directory
 
 A mobile-first, interactive directory of advisers for the **Department of
 Communication and Performing Arts (DCPA)**, College of Arts and Letters,
 Bulacan State University.
 
-*Designed, developed and maintained by **Benedict de Jesus**.*
+*Proposed by **Mr. Joshua Nicdao**. Designed, developed and maintained by
+**Benedict de Jesus**.*
 
 Students taking **BA Broadcasting**, **BA Journalism** and the **Bachelor in
 Performing Arts** can find DCPA faculty and guest faculty from across CAL —
@@ -85,7 +86,7 @@ account cannot simply be moved later without breaking the deployment.
 
 1. Go to <https://sheets.new>. A blank spreadsheet opens in your Drive.
 2. Click the title at the top-left and rename it
-   **`DAD — DCPA Advisers' Database`**.
+   **`DFAD — DCPA Faculty Advisers' Database`**.
 3. Leave `Sheet1` alone — the installer replaces it in step 5.
 
 Keep this spreadsheet **private**. Do not share it with "Anyone with the link".
@@ -98,9 +99,9 @@ In the spreadsheet: **Extensions ▸ Apps Script**.
 
 Open it *from the spreadsheet*, not from script.google.com — that binds the
 script to this sheet, which is what lets it find the data automatically and
-adds the **DAD** menu to the spreadsheet toolbar.
+adds the **DFAD** menu to the spreadsheet toolbar.
 
-Rename the project (click *Untitled project*) to **`DAD API`**.
+Rename the project (click *Untitled project*) to **`DFAD API`**.
 
 ### Step 4 — Paste in the three script files
 
@@ -129,17 +130,17 @@ Google will ask for permission the first time:
 2. You will see *"Google hasn't verified this app"*. That is expected — you own
    this script; it is unverified only because it was never submitted to Google
    for review.
-3. **Advanced** ▸ **Go to DAD API (unsafe)** ▸ **Allow**.
+3. **Advanced** ▸ **Go to DFAD API (unsafe)** ▸ **Allow**.
 
 It asks for access to your spreadsheets **and your Drive files**. The Drive
 permission is what lets faculty upload profile photos — the script creates one
-folder, *DAD — Faculty photos*, and uses only that.
+folder, *DFAD — Faculty photos*, and uses only that.
 
 The execution log prints your **coordinator access code**:
 
 ```
 =====================================================
-  COORDINATOR ACCESS CODE:  DAD-7FHK-92QX
+  COORDINATOR ACCESS CODE:  DFAD-7FHK-92QX
   Copy it now — it is hashed and cannot be shown again.
 =====================================================
 ```
@@ -152,7 +153,7 @@ Consultations · Codes · Sessions · Settings**.
 
 ### Step 6 — Create the 50 adviser slots and their codes
 
-Run **`prepareRoster50`** (or use **DAD ▸ Prepare 50 adviser slots + codes**
+Run **`prepareRoster50`** (or use **DFAD ▸ Prepare 50 adviser slots + codes**
 from the spreadsheet menu).
 
 This creates 50 blank `Pending` rows and issues one access code for each, then
@@ -163,7 +164,7 @@ A `Pending` slot is invisible to students until the faculty member signs in and
 saves their name — at that moment it lists itself. So all 50 codes can go out
 now and be claimed whenever people get round to it.
 
-When distribution is done: **DAD ▸ Delete hand-out sheet**. That removes the
+When distribution is done: **DFAD ▸ Delete hand-out sheet**. That removes the
 only place readable codes were ever written down.
 
 *(Optional: run `seedSampleData` for three clearly-labelled placeholder
@@ -178,7 +179,7 @@ rows before launch.)*
 
    | Field | Value |
    |---|---|
-   | Description | `DAD v2` |
+   | Description | `DFAD v2` |
    | **Execute as** | **Me (benedictdejesuslpt@gmail.com)** |
    | **Who has access** | **Anyone** |
 
@@ -223,13 +224,13 @@ or two.
 In the script editor, run **`selfTest`**. Every line should read `PASS`:
 
 ```
-PASS  spreadsheet reachable  → DAD — DCPA Advisers' Database
+PASS  spreadsheet reachable  → DFAD — DCPA Faculty Advisers' Database
 PASS  tab "Faculty"  → 30 columns
 PASS  directory endpoint  → 3 listed adviser(s)
 PASS  roster prepared  → 50 unclaimed slot(s) waiting
 PASS  coordinator code exists  → 1 active
 PASS  code alphabet excludes look-alikes  → 31 safe characters
-PASS  photo folder reachable  → DAD — Faculty photos
+PASS  photo folder reachable  → DFAD — Faculty photos
 ```
 
 Then on the site itself: the directory loads with no sign-in anywhere (that is
@@ -250,7 +251,7 @@ running.
 ### A note on account ownership
 
 Because everything sits in `benedictdejesuslpt@gmail.com`, the directory
-depends on that account staying available. If DAD is ever handed over to the
+depends on that account staying available. If DFAD is ever handed over to the
 department, the clean way to do it is to transfer ownership of the spreadsheet
 *and* recreate the deployment under the department's account, then update
 `BUILT_IN_API_BASE`. Worth planning for before it becomes urgent.
@@ -276,7 +277,7 @@ Sample codes for the mock:
 |---|---|
 | `DCPA-TEST-2345` | A faculty member with a filled-in profile |
 | `DCPA-NEW-7788` | An unclaimed slot, to see the first-time experience |
-| `DAD-HEAD-2345` | The coordinator |
+| `DFAD-HEAD-2345` | The coordinator |
 
 ---
 
@@ -434,19 +435,25 @@ touch targets meet minimum sizing on coarse pointers. Respects
 
 ## Credits
 
-**DAD — DCPA Advisers' Directory** was designed, built, documented and is
+**DFAD — DCPA Faculty Advisers' Directory** was designed, built, documented and is
 maintained solely by **Benedict de Jesus** — architecture, interface, database
-design and this documentation.
+design and this documentation, from an idea proposed by **Mr. Joshua Nicdao**.
 
-DAD is a personal gift to the Department of Communication and Performing Arts,
+DFAD is a personal gift to the Department of Communication and Performing Arts,
 College of Arts and Letters, Bulacan State University: built so that resource
 persons for thesis work — advisers, consultants, critics and media experts —
 are findable by the students who need them, and so that keeping the directory
 accurate never becomes anyone's second job.
 
+### Proponent
+
+DFAD exists because **Mr. Joshua Nicdao** proposed it — the idea of one place
+where students could find the right resource persons for their thesis, and
+where faculty could keep their own details current, was his.
+
 ### College and Department leadership
 
-DAD serves the Department under the leadership of:
+DFAD serves the Department under the leadership of:
 
 - **Dr. Lois Ruth B. Villavicencio** — Dean, College of Arts and Letters
 - **Mr. Marlon B. Santos** — Chairperson, Department of Communication and
@@ -456,4 +463,5 @@ These names appear in the site footer and on the About page. Because officers
 change, they are stored as settings (`dean`, `dean_title`, `chair`,
 `chair_title`) rather than hard-coded, and can be updated from **Coordinator
 dashboard ▸ Site settings** or the **Settings** tab of the spreadsheet — no
-code change needed. The developer credit (`author`) works the same way.
+code change needed. The proponent (`proponent`, `proponent_title`) and
+developer (`author`) credits work the same way.

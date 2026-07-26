@@ -1,5 +1,5 @@
 /**
- * DAD — hash router.
+ * DFAD — hash router.
  *
  * Hash routing keeps GitHub Pages happy: every URL is served by index.html,
  * so deep links like #/faculty/fac_123 survive a refresh with no 404 rules.

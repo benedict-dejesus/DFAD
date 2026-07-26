@@ -1,5 +1,5 @@
 /**
- * DAD — DCPA Advisers' Directory
+ * DFAD — DCPA Faculty Advisers' Directory
  * Logo resizer.
  * Built and developed by Benedict de Jesus.
  *

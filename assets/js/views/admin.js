@@ -31,6 +31,8 @@ const SETTING_FIELDS = [
   ['dean_title', 'Dean’s title', 'e.g. Dean, College of Arts and Letters'],
   ['chair', 'Department Chairperson', 'Shown in the footer and on the About page.'],
   ['chair_title', 'Chairperson’s title', 'e.g. Chairperson, Department of Communication and Performing Arts'],
+  ['proponent', 'Proponent', 'Who proposed the idea. Shown in the footer and on the About page.'],
+  ['proponent_title', 'Proponent’s credit line', 'e.g. Proponent — originated the idea for DFAD'],
   ['author', 'Developer credit', 'Shown in the footer and on the About page.']
 ];
 

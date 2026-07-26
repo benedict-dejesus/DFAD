@@ -1,5 +1,5 @@
 /**
- * DAD — runtime configuration.
+ * DFAD — runtime configuration.
  *
  * Paste the Apps Script Web App URL below (the one ending in `/exec`).
  * See apps-script/GUIDE.md, step 6.

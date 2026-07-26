@@ -121,6 +121,8 @@ function apiMeta_() {
       college: s.college || 'College of Arts and Letters',
       university: s.university || 'Bulacan State University',
       author: s.author || 'Benedict de Jesus',
+      proponent: s.proponent || 'Mr. Joshua Nicdao',
+      proponentTitle: s.proponent_title || 'Proponent — originated the idea for DFAD',
       dean: s.dean || 'Dr. Lois Ruth B. Villavicencio',
       deanTitle: s.dean_title || 'Dean, College of Arts and Letters',
       chair: s.chair || 'Mr. Marlon B. Santos',
@@ -512,7 +514,8 @@ function apiAdminSetSetting_(req) {
     requireAdmin_(req.token);
     const allowed = [
       'site_title', 'site_tagline', 'department', 'college', 'university',
-      'author', 'dean', 'dean_title', 'chair', 'chair_title',
+      'author', 'proponent', 'proponent_title',
+      'dean', 'dean_title', 'chair', 'chair_title',
       'term', 'announcement', 'contact_email'
     ];
     const key = str_(req.key);

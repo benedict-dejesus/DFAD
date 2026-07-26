@@ -1,5 +1,5 @@
 /**
- * DAD — DCPA Advisers' Directory
+ * DFAD — DCPA Faculty Advisers' Directory
  * In-browser mock of the Apps Script API.
  * Built and developed by Benedict de Jesus.
  *
@@ -11,7 +11,7 @@
  * Sample access codes:
  *   DCPA-TEST-2345  — faculty (a claimed profile)
  *   DCPA-NEW-7788   — faculty (an unclaimed Pending slot)
- *   DAD-HEAD-2345   — coordinator
+ *   DFAD-HEAD-2345  — coordinator
  *
  * Nothing here ships to production: app.js only imports this file when the
  * `mock` query parameter is present.
@@ -34,12 +34,14 @@ const blankRoles = () => ({ adviser: 'Closed', consultant: 'Closed', critic: 'Cl
 
 const db = {
   settings: {
-    site_title: "DAD — DCPA Advisers' Directory",
+    site_title: "DFAD — DCPA Faculty Advisers' Directory",
     site_tagline: 'Advisers, consultants, critics and media experts',
     department: 'Department of Communication and Performing Arts',
     college: 'College of Arts and Letters',
     university: 'Bulacan State University',
     author: 'Benedict de Jesus',
+    proponent: 'Mr. Joshua Nicdao',
+    proponent_title: 'Proponent — originated the idea for DFAD',
     dean: 'Dr. Lois Ruth B. Villavicencio',
     dean_title: 'Dean, College of Arts and Letters',
     chair: 'Mr. Marlon B. Santos',
@@ -159,7 +161,7 @@ const db = {
   codes: {
     DCPATEST2345: { facultyId: 'fac_one', role: 'faculty', label: 'Amihan R. Salvador' },
     DCPANEW7788: { facultyId: 'fac_pending', role: 'faculty', label: 'Slot 06' },
-    DADHEAD2345: { facultyId: '', role: 'admin', label: 'Coordinator' }
+    DFADHEAD2345: { facultyId: '', role: 'admin', label: 'Coordinator' }
   },
   sessions: {}
 };
@@ -257,6 +259,8 @@ const handlers = {
       college: db.settings.college,
       university: db.settings.university,
       author: db.settings.author,
+      proponent: db.settings.proponent,
+      proponentTitle: db.settings.proponent_title,
       dean: db.settings.dean,
       deanTitle: db.settings.dean_title,
       chair: db.settings.chair,
@@ -529,6 +533,6 @@ window.fetch = async function mockFetch(input, init = {}) {
 };
 
 console.info(
-  "%cDAD mock API active%c\nfaculty: DCPA-TEST-2345\nunclaimed slot: DCPA-NEW-7788\ncoordinator: DAD-HEAD-2345",
+  "%cDFAD mock API active%c\nfaculty: DCPA-TEST-2345\nunclaimed slot: DCPA-NEW-7788\ncoordinator: DFAD-HEAD-2345",
   'font-weight:bold;color:#10593f', 'color:inherit'
 );

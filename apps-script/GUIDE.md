@@ -1,9 +1,9 @@
 # Setting up the DFAD backend (Google Sheets + Apps Script)
 
-**DFAD — DCPA Advisers' Directory**
+**DFAD — DCPA Faculty Advisers' Directory**
 Built and developed by Benedict de Jesus
 
-This is the complete walkthrough for the database side of DAD. Follow it once
+This is the complete walkthrough for the database side of DFAD. Follow it once
 and the website has a working, editable backend, plus 50 access codes ready to
 hand out.
 
@@ -33,7 +33,7 @@ hold the spreadsheet, the access codes and the faculty photos.
         │  read only                          │  read + write
         ▼                                     ▼
    ┌─────────────────────────────────────────────────┐
-   │        GitHub Pages — the DAD website           │
+   │        GitHub Pages — the DFAD website           │
    └─────────────────────────────────────────────────┘
                           │  HTTPS
                           ▼
@@ -63,7 +63,7 @@ anywhere. The database holds exactly three things:
 
 1. Signed in as `benedictdejesuslpt@gmail.com`, go to <https://sheets.new>
    (this creates a new blank spreadsheet in that Drive).
-2. Rename it something obvious: **`DAD — DCPA Advisers' Database`**.
+2. Rename it something obvious: **`DFAD — DCPA Faculty Advisers' Database`**.
    Click the title at the top-left to rename.
 3. Leave the default `Sheet1` tab alone — the installer replaces it in step 4.
 
@@ -82,9 +82,9 @@ A new tab opens with a project containing one file, `Code.gs`, with an empty
 
 > **Important:** open the editor *from the spreadsheet*, not from
 > script.google.com. That makes the script "bound" to this spreadsheet, which
-> is what lets it find the sheet automatically and adds the **DAD** menu.
+> is what lets it find the sheet automatically and adds the **DFAD** menu.
 
-Rename the project (click **Untitled project** at the top): **`DAD API`**.
+Rename the project (click **Untitled project** at the top): **`DFAD API`**.
 
 ---
 
@@ -133,14 +133,14 @@ This creates the five tabs, the dropdowns, and your coordinator access code.
      to Google for review.
    - Click **Advanced** ▸ **Go to DFAD API (unsafe)** ▸ **Allow**.
    - It asks to see and edit your spreadsheets **and your Drive files**. The
-     Drive permission is what lets faculty upload profile photos — DAD puts
-     them in one folder it creates, called *DAD — Faculty photos*.
+     Drive permission is what lets faculty upload profile photos — DFAD puts
+     them in one folder it creates, called *DFAD — Faculty photos*.
 4. Watch the **Execution log** at the bottom.
 
 You will see something like:
 
 ```
-DAD — DCPA Advisers' Directory: setup complete.
+DFAD — DCPA Faculty Advisers' Directory: setup complete.
 
 Spreadsheet: DFAD — DCPA Faculty Advisers' Database
 Tabs ready: Faculty, Consultations, Codes, Sessions, Settings
@@ -199,7 +199,7 @@ get round to it. **Nothing lands back on your desk.**
 Fill in the *Given to* and *Date given* columns as you distribute, so you know
 who holds which slot. When you are done:
 
-**DAD ▸ Delete hand-out sheet**
+**DFAD ▸ Delete hand-out sheet**
 
 That removes the only place a readable code was ever written down. After that
 the codes exist only where you wrote them and where each faculty member keeps
@@ -235,7 +235,7 @@ This is the step that turns your script into a URL the website can call.
 
    | Field | Value |
    |---|---|
-   | **Description** | `DAD v2` |
+   | **Description** | `DFAD v2` |
    | **Execute as** | **Me (benedictdejesuslpt@gmail.com)** |
    | **Who has access** | **Anyone** |
 
@@ -283,19 +283,19 @@ needs the value committed into `config.js`.
 In the script editor, run **`selfTest`**:
 
 ```
-PASS  spreadsheet reachable  → DAD — DCPA Advisers' Database
+PASS  spreadsheet reachable  → DFAD — DCPA Faculty Advisers' Database
 PASS  tab "Faculty"  → 30 columns
 PASS  tab "Consultations"  → 11 columns
 PASS  tab "Codes"  → 9 columns
 PASS  tab "Sessions"  → 6 columns
 PASS  tab "Settings"  → 3 columns
 PASS  script pepper set  → yes
-PASS  meta endpoint  → DAD — DCPA Advisers' Directory
+PASS  meta endpoint  → DFAD — DCPA Faculty Advisers' Directory
 PASS  directory endpoint  → 3 listed adviser(s)
 PASS  roster prepared  → 50 unclaimed slot(s) waiting
 PASS  coordinator code exists  → 1 active
 PASS  code alphabet excludes look-alikes  → 31 safe characters
-PASS  photo folder reachable  → DAD — Faculty photos
+PASS  photo folder reachable  → DFAD — Faculty photos
 PASS  time normalisation  → ok
 ```
 
@@ -328,7 +328,7 @@ coordinator does not fill in profiles. Faculty do that themselves.
 
 When someone signs in with their code, they get four tabs:
 
-- **Profile** — upload a photo straight from their phone (DAD crops it square
+- **Profile** — upload a photo straight from their phone (DFAD crops it square
   and shrinks it before it ever leaves the browser), plus name, rank,
   department, programmes, fields of expertise, a short bio, Facebook, LinkedIn,
   a personal page, and contact details with a visibility switch on the email
@@ -354,11 +354,11 @@ Hand them the next unused code from the hand-out sheet. That is the whole
 process. They sign in, save their name, and they are listed.
 
 If you have run out of prepared slots, run `prepareRoster(10)` for ten more, or
-use **DAD ▸ Prepare 50 adviser slots + codes** again.
+use **DFAD ▸ Prepare 50 adviser slots + codes** again.
 
 ### Someone loses their code
 
-**DAD ▸ Issue code for selected row** — click their row on the Faculty tab
+**DFAD ▸ Issue code for selected row** — click their row on the Faculty tab
 first. The old code stops working immediately.
 
 Or, from the coordinator dashboard on the website: open the record ▸ **Issue
@@ -367,7 +367,7 @@ new code**.
 ### Someone leaves
 
 Open their record from the coordinator dashboard and set the status to
-**Archived**, or use **DAD ▸ Revoke codes for selected row** to sign them out
+**Archived**, or use **DFAD ▸ Revoke codes for selected row** to sign them out
 and block their code without touching the record.
 
 ### Sending someone their code
@@ -398,6 +398,8 @@ About page. Officers change, so these are settings rather than hard-coded text
 | `dean_title` | Dean, College of Arts and Letters |
 | `chair` | Mr. Marlon B. Santos |
 | `chair_title` | Chairperson, Department of Communication and Performing Arts |
+| `proponent` | Mr. Joshua Nicdao |
+| `proponent_title` | Proponent — originated the idea for DFAD |
 | `author` | Benedict de Jesus |
 
 There is deliberately **no activity log**. Students are not tracked, so there
@@ -417,11 +419,11 @@ A few columns worth knowing:
 - **`programs`** and **`expertise`**: semicolon-separated lists —
   `Broadcast production; Media ethics`.
 - **`facebook` / `linkedin` / `website`**: full profile URLs. Faculty can type
-  a bare username in the portal and DAD expands it; if you type in the sheet
+  a bare username in the portal and DFAD expands it; if you type in the sheet
   by hand, paste the whole link.
 - **`photo` / `photo_file_id`**: written by the uploader. Leave them alone —
   editing `photo` by hand is fine if you want to point at an existing image
-  URL, but `photo_file_id` is how DAD cleans up replaced photos in Drive.
+  URL, but `photo_file_id` is how DFAD cleans up replaced photos in Drive.
 
 ---
 
@@ -449,7 +451,7 @@ This keeps the **same URL**, so you do not have to touch `config.js` again.
 **The directory is empty but the sheet has rows.**
 Check the `status` column says exactly `Active`, and that each row has both an
 `id` and a `name`. `Pending` rows are hidden on purpose. Rows typed in by hand
-without an id are skipped — use **DAD ▸ Issue code for selected row**, which
+without an id are skipped — use **DFAD ▸ Issue code for selected row**, which
 fills the id in for you.
 
 **"That access code was not recognised."**
@@ -520,6 +522,6 @@ hand-out sheet once distribution is done, and keep the spreadsheet private.
 
 ---
 
-*DAD — DCPA Advisers' Directory. Designed, developed and documented by
-Benedict de Jesus for the Department of Communication and Performing Arts,
+*DFAD — DCPA Faculty Advisers' Directory. Proposed by Mr. Joshua Nicdao.
+Designed, developed and documented by Benedict de Jesus for the Department of Communication and Performing Arts,
 College of Arts and Letters, Bulacan State University.*

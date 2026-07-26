@@ -1,5 +1,5 @@
 /**
- * DAD — DCPA Advisers' Directory
+ * DFAD — DCPA Faculty Advisers' Directory
  * Tests for the Apps Script validation layer.
  * Built and developed by Benedict de Jesus.
  *
@@ -87,11 +87,11 @@ const many = Array.from({ length: 300 }, () => run('generateCode_')('DCPA'));
 check('no look-alike ever generated', many.some((c) => /[OIL01]/.test(c.slice(5))), false);
 check('every code matches the expected shape',
   many.every((c) => /^DCPA-[ABCDEFGHJKMNPQRSTUVWXYZ2-9]{4}-[ABCDEFGHJKMNPQRSTUVWXYZ2-9]{4}$/.test(c)), true);
-check('coordinator prefix', run('generateCode_')('DAD').startsWith('DAD-'), true);
+check('coordinator prefix', run('generateCode_')('DFAD').startsWith('DFAD-'), true);
 
 console.log('\naccess code hashing');
 check('normalises dashes/case', run('normalizeCode_')('dcpa-7f3k-92qx'), 'DCPA7F3K92QX');
-check('strips spaces', run('normalizeCode_')(' DAD 7F3K 92QX '), 'DAD7F3K92QX');
+check('strips spaces', run('normalizeCode_')(' DFAD 7F3K 92QX '), 'DFAD7F3K92QX');
 const code = run('generateCode_')('DCPA');
 const salt = 'saltysalt';
 const h1 = run('hashCode_')(code, salt);

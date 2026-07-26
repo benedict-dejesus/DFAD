@@ -100,6 +100,8 @@ function seedSettings_() {
     college: 'College of Arts and Letters',
     university: 'Bulacan State University',
     author: 'Benedict de Jesus',
+    proponent: 'Mr. Joshua Nicdao',
+    proponent_title: 'Proponent — originated the idea for DFAD',
     dean: 'Dr. Lois Ruth B. Villavicencio',
     dean_title: 'Dean, College of Arts and Letters',
     chair: 'Mr. Marlon B. Santos',
@@ -199,7 +201,7 @@ function prepareRoster(count) {
     created[created.length - 1].slotNo + ').\n\n' +
     'The codes are on the "' + SHEETS.HANDOUT + '" tab.\n\n' +
     'Hand them out, note who got which slot in the "given to" column, then use\n' +
-    'DAD ▸ Delete hand-out sheet once you are done. The codes cannot be\n' +
+    'DFAD ▸ Delete hand-out sheet once you are done. The codes cannot be\n' +
     'recovered after that — issue a new one if someone loses theirs.';
   console.log(message);
   alert_(message);
@@ -225,7 +227,7 @@ function writeHandoutSheet_(rows) {
   if (startRow === 3) {
     sh.clear();
     sh.getRange('A1:D1').merge()
-      .setValue('⚠  TEMPORARY — these are readable access codes. Hand them out, then delete this tab (DAD ▸ Delete hand-out sheet).')
+      .setValue('⚠  TEMPORARY — these are readable access codes. Hand them out, then delete this tab (DFAD ▸ Delete hand-out sheet).')
       .setBackground('#faf4e5').setFontColor('#7d5a10').setFontWeight('bold').setWrap(true);
     sh.setRowHeight(1, 40);
     sh.getRange('A2:D2').setValues([['Slot', 'Access code', 'Given to', 'Date given']])
@@ -359,7 +361,7 @@ function seedSampleData() {
 function onOpen() {
   try {
     SpreadsheetApp.getUi()
-      .createMenu('DAD')
+      .createMenu('DFAD')
       .addItem('Run setup / repair tabs', 'setup')
       .addSeparator()
       .addItem('Prepare ' + DEFAULT_ROSTER_SIZE + ' adviser slots + codes', 'prepareRoster50')
