@@ -1,5 +1,5 @@
 /* ==========================================================================
-   DAD — reset, shell and page layout (mobile-first)
+   DFAD — reset, shell and page layout (mobile-first)
    ========================================================================== */
 
 *, *::before, *::after { box-sizing: border-box; }
@@ -182,7 +182,7 @@ button { cursor: pointer; }
   text-transform: uppercase;
   font-weight: 600;
 }
-/* Narrow phones: both seals still fit beside "DAD", so only the descriptor
+/* Narrow phones: both seals still fit beside "DFAD", so only the descriptor
    line drops — the full name stays in the tab title and the footer. */
 @media (max-width: 420px) {
   .brand__text small { display: none; }

@@ -1,5 +1,5 @@
 /**
- * DAD — DCPA Advisers' Directory
+ * DFAD — DCPA Advisers' Directory
  * About page, credits, and the connection settings panel used during setup.
  * Built and developed by Benedict de Jesus.
  */
@@ -78,10 +78,10 @@ export function mount(container) {
           </div>
         </div>
 
-        <h1 class="panel__title" style="font-size:var(--fs-2xl)">About DAD</h1>
+        <h1 class="panel__title" style="font-size:var(--fs-2xl)">About DFAD</h1>
         <p class="panel__sub">DCPA Advisers' Directory</p>
         <p>
-          DAD is the advisers' directory of the <b>Department of Communication and
+          DFAD is the advisers' directory of the <b>Department of Communication and
           Performing Arts</b> — ${site.college || 'College of Arts and Letters'},
           ${site.university || 'Bulacan State University'}. It brings together the
           people students in BA Broadcasting, BA Journalism and the Bachelor in
@@ -157,7 +157,7 @@ export function mount(container) {
         <h2 class="panel__title" style="font-size:var(--fs-lg)">Privacy</h2>
         <p>
           Students are not tracked. No accounts, no analytics, no record of who
-          looked at what — browsing DAD leaves nothing behind. The database holds
+          looked at what — browsing DFAD leaves nothing behind. The database holds
           only three things: faculty access codes, faculty profile data, and the
           schedule and availability updates faculty make themselves.
         </p>
@@ -177,7 +177,7 @@ export function mount(container) {
       <section class="panel" style="margin-top:16px">
         <h2 class="panel__title" style="font-size:var(--fs-lg)">College and Department leadership</h2>
         <p class="panel__sub">
-          DAD serves the Department under the leadership of:
+          DFAD serves the Department under the leadership of:
         </p>
         <ul class="leaders">
           <li class="leader">
@@ -203,14 +203,14 @@ export function mount(container) {
           <span class="author-card__mark" aria-hidden="true">BdJ</span>
           <div>
             <h3>${author}</h3>
-            <p class="author-card__role">Sole developer &amp; administrator, DAD</p>
+            <p class="author-card__role">Sole developer &amp; administrator, DFAD</p>
             <p>
-              ${author} designed, built and maintains DAD single-handedly — the
+              ${author} designed, built and maintains DFAD single-handedly — the
               architecture, the interface, the database design and the
               documentation.
             </p>
             <p style="margin-top:10px">
-              DAD is a personal gift to the Department of Communication and
+              DFAD is a personal gift to the Department of Communication and
               Performing Arts: built so that resource persons for thesis work —
               advisers, consultants, critics and media experts — are findable by
               the students who need them, and so that keeping the directory
@@ -254,7 +254,7 @@ export function mount(container) {
       </details>
 
       <p style="text-align:center;margin-top:24px">
-        <span class="credit">${icon('star')} DAD — designed and developed by <b>${author}</b></span>
+        <span class="credit">${icon('star')} DFAD — designed and developed by <b>${author}</b></span>
       </p>
     </div>
   `);

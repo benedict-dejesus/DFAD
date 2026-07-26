@@ -1,5 +1,5 @@
 /* ==========================================================================
-   DAD — components
+   DFAD — components
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
@@ -1272,7 +1272,7 @@
   box-shadow: var(--shadow-1);
 }
 /* College Dean and Department Chairperson. Presented as leadership of the
-   institution DAD serves — deliberately a separate block from the developer
+   institution DFAD serves — deliberately a separate block from the developer
    credit, so neither reads as a claim on the other. */
 .leaders { display: grid; gap: var(--space-3); margin-block-start: var(--space-2); }
 .leader {
